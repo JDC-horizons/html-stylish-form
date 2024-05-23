@@ -6,8 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <title>Stylish Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Freeman&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
+    <form class="main-form">
+      <h1>Say Hello!</h1>
+      <label class="form-section">
+        Your name
+        <input
+          required
+          type="text"
+          name="customerName"
+          placeholder="Enter your name"
+          minlength="1"
+        />
+      </label>
+      <label class="form-section">
+        Email
+        <input
+          required
+          type="email"
+          name="customerEmail"
+          placeholder="Enter your email address"
+        />
+      </label>
+      <label class="form-section">
+        Needed Services
+        <select required name="serviceRequests" placeholder="Choose Services">
+          <option value="webDesign">Website Design</option>
+          <option value="database">Building Database(s)</option>
+          <option value="appDesign">App Design</option>
+          <option value="SEO">Search Engine Optimization</option>
+        </select>
+      </label>
+      <label class="form-section">
+        Budget (£s)
+        <input
+          type="number"
+          name="customerBudget"
+          min="500"
+          max="5000"
+          step="100"
+          placeholder="Select Budget"
+        />
+      </label>
+      <label class="form-section">
+        Message
+        <input
+          required
+          class="message-text"
+          type="text"
+          name="customerMessage"
+          placeholder="Your message here..."
+          minlength="1"
+        />
+      </label>
+      <button>Submit!</button>
+    </form>
   </body>
 </html>
